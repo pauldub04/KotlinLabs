@@ -32,7 +32,6 @@ fun main() {
 
     for (test in 1..100) {
         val a = List(50) { Random().nextInt() }
-        val b = a.mergeSorted().toMutableList()
         if (a.sorted() != a.mergeSorted())
             throw Exception("Sorting is invalid, test $test")
     }
